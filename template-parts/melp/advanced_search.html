@@ -1,0 +1,104 @@
+<div id="adv-search-hero">
+  <div id="adv-search-heading">
+    <h1 data-melp-text="search_hero_title">Search All Letters</h1>
+    <p id="adv-search-subheading" data-melp-text="search_hero_subtitle">Explore over 250 letters from the Maria Edgeworth collection</p>
+  </div>
+  <div id="adv-search-bar">
+    <label for="adv-search-box" class="visually-hidden">Search letters</label>
+    <input id="adv-search-box" type="search" placeholder="Search letters..." data-melp-text-attr="placeholder:search_box_placeholder" />
+    <button id="adv-search-button" type="button">Search</button>
+  </div>
+</div>
+<div id="adv-search-filter-and-results">
+  <div id="adv-search-filter">
+    <span class="adv-search-filter-label">Filters</span>
+
+    <!-- SEARCH TYPE -->
+    <div id="adv-search-type-bar" role="radiogroup" aria-labelledby="adv-search-type-label">
+      <span class="adv-search-type-label" id="adv-search-type-label">Search Type</span>
+      <span><input id="adv-search-type-metadata" type="radio" name="search-type" checked> <label for="adv-search-type-metadata">Letters and metadata</label></span>
+      <span><input id="adv-search-type-letters" type="radio" name="search-type"> <label for="adv-search-type-letters">Letters only</label></span>
+    </div>
+
+    <!-- DATE FILTER -->
+    <details>
+      <summary>Dates</summary>
+      <fieldset class="adv-date-search-group">
+        <legend class="metadata-label">Date From</legend>
+        <div class="adv-date-search-bar">
+          <input id="adv-search-date-from-year-box" class="date-box year" placeholder="1791" max="2000" type="number" aria-label="From year" />
+          <input id="adv-search-date-from-month-box" class="date-box month" placeholder="12" max="12" type="number" aria-label="From month" />
+          <input id="adv-search-date-from-day-box" class="date-box day" placeholder="7" max="31" type="number" aria-label="From day" />
+        </div>
+      </fieldset>
+
+      <fieldset class="adv-date-search-group">
+        <legend class="metadata-label">Date To</legend>
+        <div class="adv-date-search-bar">
+          <input id="adv-search-date-to-year-box" class="date-box year" placeholder="1848" max="2000" type="number" aria-label="To year" />
+          <input id="adv-search-date-to-month-box" class="date-box month" placeholder="7" max="12" type="number" aria-label="To month" />
+          <input id="adv-search-date-to-day-box" class="date-box day" placeholder="1" max="31" type="number" aria-label="To day" />
+        </div>
+      </fieldset>
+
+      <button type="button" id="adv-search-dates-apply-button">Apply Dates</button>
+    </details>
+
+    <!-- PEOPLE FILTER -->
+    <details id="adv-search-people-filter-container">
+      <summary>People</summary>
+      <select id="adv-search-people-filter" class="filter-box" name="people[]" multiple="multiple" data-entity_type="PERSON" aria-label="Filter by person"></select>
+    </details>
+
+    <!-- WORKS FILTER -->
+    <details id="adv-search-works-filter-container">
+      <summary>Works</summary>
+      <select id="adv-search-works-filter" class="filter-box" name="works[]" multiple="multiple" data-entity_type="WORK" aria-label="Filter by work"></select>
+    </details>
+
+    <!-- PLACES FILTER -->
+    <details id="adv-search-places-filter-container">
+      <summary>Places</summary>
+      <select id="adv-search-places-filter" class="filter-box" name="places[]" multiple="multiple" data-entity_type="PLACE" aria-label="Filter by place"></select>
+    </details>
+
+    <!-- REPOSITORY FILTER -->
+    <details id="adv-search-repos-filter-container">
+      <summary>Repository</summary>
+      <select id="adv-search-repos-filter" class="filter-box" name="repos[]" multiple="multiple" data-entity_type="ORG" aria-label="Filter by repository"></select>
+    </details>
+
+    <button type="button" id="adv-search-clear-filter-button">Clear All Filters</button>
+  </div>
+  <div id="adv-search-results-container">
+    <h2 class="visually-hidden">Search Results</h2>
+    <div id="adv-search-results-meta-bar">
+      <label for="adv-search-sort-box" class="visually-hidden">Sort search results</label>
+      <select id="adv-search-sort-box">
+        <option value="asc">Sort By: Date (earliest first)</option>
+        <option value="desc">Sort By: Date (latest first)</option>
+      </select>
+
+      <span id="adv-search-count-bar" aria-live="polite" aria-atomic="true">
+        Showing <span id="adv-search-current-result">0</span><span id="adv-search-result-range-sep">–</span><span id="adv-search-last-result">0</span> out of <span id="adv-search-total-results">0</span>
+      </span>
+    </div>
+
+    <div id="adv-search-results">
+
+    </div>
+
+    <nav id="adv-search-pagination" aria-label="Search results pagination"></nav>
+  </div>
+</div>
+
+<div id="adv-search-modal" role="dialog" aria-modal="true" aria-label="Letter filters">
+  <div id="adv-search-modal-apply-close">
+    <button type="button" id="adv-search-modal-apply-button">Apply Filters</button>
+    <button type="button" id="adv-search-modal-close-button" aria-label="Close filters">
+      <img src="/wp-content/themes/understrap-child/assets/images/icon_hamburger_close.png" alt="" />
+    </button>
+  </div>
+
+  <div id="adv-search-modal-search-and-filter-div"></div>
+</div>

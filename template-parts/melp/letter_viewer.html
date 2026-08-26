@@ -1,0 +1,146 @@
+<h1 id="letter-title"></h1>
+
+<div id="letter-image-thumbs">
+
+</div>
+
+<p id="letter-columns-label">Display Options</p>
+<div id="letter-columns" role="group" aria-labelledby="letter-columns-label">
+  <button type="button" class="letter-columns-button" data-arrangement="half" aria-pressed="false">50/50</button>
+  <button type="button" class="letter-columns-button" data-arrangement="two-thirds" aria-pressed="false">60/40</button>
+  <button type="button" class="letter-columns-button" data-arrangement="image-only" aria-pressed="false">Image only</button>
+  <button type="button" class="letter-columns-button" data-arrangement="transcription-only" aria-pressed="false">TRANSCRIPTION ONLY</button>
+</div>
+
+<div id="letter-viewer">
+  <a id="previous-letter-link" class="letter-sequence-link" href="" aria-label="Previous letter" aria-disabled="true" tabindex="-1">
+    <img class="letter-sequence-image" src="/wp-content/themes/understrap-child/assets/images/letter_viewer_previous_letter.png" alt="" />
+  </a>
+
+  <div id="letter-image-toolbar"></div>
+
+  <div id="letter-image-and-license">
+    <div id="letter-image-viewer"></div>
+    <div id="letter-license"></div>
+  </div>
+
+  <div id="letter-xml-and-transcript">
+    <div id="letter-xml">
+      <div id="letter-xml-titlegroup">
+        <p id="letter-transcript-label">Transcript:</p>
+        <a id="letter-xml-link" class="letter-columns-button" href="" target="_blank" rel="noopener" aria-label="View XML (opens in new tab)">View XML</a>
+      </div>
+      <label id="letter-remove-annotations-label">
+        <span class="annotations-toggle-text">Remove Annotations</span>
+        <input type="checkbox" id="letter-remove-annotations">
+        <span class="annotations-toggle" aria-hidden="true"></span>
+      </label>
+    </div>
+    <div id="letter-transcript-wrap">
+      <button type="button" id="letter-about-toggle" aria-expanded="false" aria-controls="letter-about-modal" aria-label="About the letters">
+        <img src="/wp-content/themes/understrap-child/assets/images/QuestionMark.svg" alt="" />
+      </button>
+      <div id="letter-about-modal" role="dialog" aria-modal="true" aria-labelledby="letter-about-modal-title" hidden>
+        <button type="button" id="letter-about-close" aria-label="Close">
+          <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M1 1L13 13M13 1L1 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <h2 id="letter-about-modal-title" data-melp-text="about_letters_title">About the Letters</h2>
+        <div id="letter-about-modal-body" data-melp-text="about_letters_body" data-melp-html>
+          <p>Any empty space on the right is intentional, the line lengths of the transcription are intended to match the original letter.</p>
+          <p>The annotations within text are links to other people, places or works. Click on them to explore other related letters.</p>
+          <p class="letter-about-italic">To turn off formatting and annotations use the "Remove Annotations" switch.</p>
+          <p><a class="letter-about-link" href="/about/#about-glossary">See the glossary for further information</a></p>
+        </div>
+      </div>
+      <div id="letter-transcript-viewer">
+        <p id="letter-transcript-pending" data-melp-text="transcript_pending">Transcript coming soon</p>
+        <div id="letter-stretcher" style="height: 675px;">&nbsp;</div>
+      </div>
+    </div>
+  </div>
+
+  <a id="next-letter-link" class="letter-sequence-link" href="" aria-label="Next letter" aria-disabled="true" tabindex="-1">
+    <img class="letter-sequence-image" src="/wp-content/themes/understrap-child/assets/images/letter_viewer_next_letter.png" alt="" />
+  </a>
+</div>
+
+<div id="letter-detail-section">
+<div id="letter-detail-container">
+<div id="letter-metadata">
+  <div id="letter-metadata-author-div">
+    <div class="metadata-label">Author</div>
+    <span id="letter-metadata-author"></span>
+  </div>
+  <div id="letter-metadata-transcriber-div">
+    <div class="metadata-label">Transcription and coding by</div>
+    <span id="letter-metadata-transcriber"></span>
+  </div>
+  <div id="letter-metadata-repository-div">
+    <div class="metadata-label">Repository</div>
+    <span id="letter-metadata-repository"></span>
+  </div>
+
+  <div id="letter-metadata-recipient-div">
+    <div class="metadata-label">Recipient</div>
+    <span id="letter-metadata-recipient"></span>
+  </div>
+  <div id="letter-metadata-first-edition-date-div">
+    <div class="metadata-label">First Digital Edition in TEI, Date</div>
+    <span id="letter-metadata-first-edition-date"></span>
+  </div>
+  <div id="letter-metadata-collection-div">
+    <div class="metadata-label">Collection</div>
+    <span id="letter-metadata-collection"></span>
+  </div>
+
+  <div id="letter-metadata-written-date-div">
+    <div class="metadata-label">Date Written</div>
+    <span id="letter-metadata-written-date"></span>
+  </div>
+  <div id="letter-metadata-general-editors-div">
+    <div class="metadata-label">General Editors</div>
+    <span id="letter-metadata-general-editors"></span>
+  </div>
+
+</div>
+
+<div id="letter-detail-right">
+<div id="letter-facets">
+  <details id="letter-PERSON-facet" class="letter-facet" open>
+    <summary>People</summary>
+    <div class="letter-facet-items"></div>
+  </details>
+
+  <details id="letter-WORK-facet" class="letter-facet" open>
+    <summary>Works</summary>
+    <div class="letter-facet-items"></div>
+  </details>
+
+  <details id="letter-PLACE-facet" class="letter-facet" open>
+    <summary>Places</summary>
+    <div class="letter-facet-items"></div>
+  </details>
+</div>
+
+<div id="letter-citation-and-credit">
+  <div id="letter-citation-container">
+    <div class="metadata-label">Citation</div>
+    <button type="button" id="letter-citation">
+      Edgeworth, M. "Letter from Maria Edgeworth to Mrs. Miles December 14, 1811, MSL/1876/Forster/223", in The Maria Edgeworth Letters Archive, MSL/1876/Forster/223, 1v. Retrieved from https://mariaedgeworth.org/sc/va/msl_1876_forster/223/#/p2/mode/xml
+    </button>
+    <span id="letter-citation-status" class="visually-hidden" role="status"></span>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="letter-credit">
+  <h2 data-melp-text="credit_heading">Credit Section</h2>
+  <span id="letter-credit-contents" data-melp-text="credit_body">MELP is sponsored by Texas A&amp;M University, University of Tennessee, Wake Forest University, and Xavier University of Louisiana.</span>
+</div>
+
+<div id="letter-up-next">
+  <h2 data-melp-text="up_next_heading">Up Next</h2>
+  <div id="letter-up-next-carousel" class="letter-carousel" data-identifier="up-next"></div>
+</div>

@@ -1,0 +1,26 @@
+<div id="topic-index-header">
+  <!-- JS replaces the fallback text with the active type label ("People",
+       "Places", …), colored via --melp-pill-{type}-active. -->
+  <h1 id="topic-index-title" aria-live="polite">Topic Index</h1>
+</div>
+
+<div id="topic-index-meta-bar">
+  <label for="topic-index-sort-box" class="visually-hidden">Sort topics</label>
+  <select id="topic-index-sort-box">
+    <option value="name_asc">Sort By: A-Z</option>
+    <option value="name_desc">Sort By: Z-A</option>
+    <option value="count_desc">Sort By: Most mentioned</option>
+    <option value="count_asc">Sort By: Least mentioned</option>
+  </select>
+  <label for="topic-index-page-size-box" class="visually-hidden">Results per page</label>
+  <select id="topic-index-page-size-box">
+    <option value="20">Show 20 Per Page</option>
+    <option value="50">Show 50 Per Page</option>
+    <option value="100">Show 100 Per Page</option>
+  </select>
+  <span id="topic-index-count-bar" aria-live="polite"><!-- JS fills with "N Results" --></span>
+</div>
+
+<div id="topic-index-results"><!-- JS fills with .topic-index-row anchors --></div>
+
+<nav id="topic-index-pagination" aria-label="Topic index pagination"><!-- JS fills using the same .adv-search-page-link button styling --></nav>

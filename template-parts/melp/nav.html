@@ -1,0 +1,43 @@
+<div id="announcement-banner" data-melp-text="announcement_text">
+  The Editors are currently reviewing and correcting transcriptions and coding for MELP's beta website.
+</div>
+<nav id="nav-container" aria-label="Primary">
+  <div id="nav-title-and-menu">
+    <p id="nav-title">
+      <a href="/" data-melp-text="nav_wordmark">Maria Edgeworth Letters Project</a>
+    </p>
+
+    <div id="nav-search">
+      <label for="nav-search-bar" class="visually-hidden">Search letters</label>
+      <input type="search" id="nav-search-bar" placeholder="Search Letters" data-melp-text-attr="placeholder:nav_search_placeholder" />
+      <button type="button" id="nav-search-button">Search</button>
+    </div>
+
+    <div id="nav-menu">
+      <!-- Populated by Nav.load_navigation() from the Corpora SitePage records. -->
+    </div>
+  </div>
+
+  <button type="button" id="hamburger-open-button" aria-label="Open menu" aria-expanded="false" aria-controls="hamburger-modal">
+    <img src="/wp-content/themes/understrap-child/assets/images/hamburger_menu.svg" alt="" />
+  </button>
+</nav>
+
+<div id="masthead">
+  <div id="masthead-left-col" class="masthead-col"></div>
+  <div id="masthead-center-col" class="masthead-col">
+    <div id="masthead-title-and-description"></div>
+  </div>
+  <div id="masthead-right-col" class="masthead-col"></div>
+</div>
+
+<div id="hamburger-modal" role="dialog" aria-modal="true" aria-label="Site navigation">
+  <div id="hamburger-title-container">
+    <button type="button" id="hamburger-close-button" aria-label="Close menu">
+      <img src="/wp-content/themes/understrap-child/assets/images/icon_hamburger_close.png" alt="" />
+    </button>
+  </div>
+  <div id="hamburger-search-container"></div>
+  <div id="hamburger-nav-container"></div>
+  <div id="hamburger-footer-container"></div>
+</div>
