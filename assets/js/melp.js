@@ -1946,7 +1946,7 @@ class LetterViewer {
         // set credits section
         jQuery('#letter-credit-contents').html(`
             ${letter.repository ? `This image has been provided by ${escapeHtml(letter.repository.name)}.`: ''}
-            MELP is sponsored by Texas A&M University, University of Tennessee, Wake Forest University, and Xavier University of Louisiana.
+            MELP is sponsored by Texas A&M University, University of Tennessee, Wake Forest University, Xavier University of Louisiana, and Southern Methodist University.
         `)
 
         // build thumbnails — real <button>s so page switching
